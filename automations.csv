@@ -1,0 +1,13 @@
+﻿TYPE,DISPLAY_NAME,CODE_PATH,WORKING_FOLDER,ICON
+Python,M2M,OneDrive - Singtel\\Digital Team\\Automations\\M2M\\M2M-automation.py,OneDrive - Singtel\\Digital Team\\WorkingFiles\\M2M,
+Python,ITPAS,OneDrive - Singtel\\Digital Team\\Automations\\iPCC\\ITPAS\\itpas-full-v2.py,OneDrive - Singtel\\Digital Team\\WorkingFiles\\iPCC\\ITPAS,
+Python,ITPAS RRL,OneDrive - Singtel\\Digital Team\\Automations\\iPCC\\ITPAS RRL\\itpas-reserved-range-automation.py,OneDrive - Singtel\\Digital Team\\WorkingFiles\\iPCC\\ITPAS,
+Python,VCP,OneDrive - Singtel\\Digital Team\\Automations\\iPCC\\VCP\\vcp-full-v2.py,OneDrive - Singtel\\Digital Team\\WorkingFiles\\iPCC\\VCP,
+Python,VCP (HB),OneDrive - Singtel\\Digital Team\\Automations\\iPCC\\VCP HB\\hb-v2.py,OneDrive - Singtel\\Digital Team\\WorkingFiles\\iPCC\\VCP,
+Python,URCG,OneDrive - Singtel\\Digital Team\\Automations\\iPCC\\URCG\\urcg-full.py,OneDrive - Singtel\\Digital Team\\WorkingFiles\\iPCC\\URCG,
+Python,BizBB,OneDrive - Singtel\\Digital Team\\Automations\\iPCC\\BIZBB\\bizbb-full-v2.py,OneDrive - Singtel\\Digital Team\\WorkingFiles\\iPCC\\BIZBB,
+App,Credit Note,https://singtel.sharepoint.com/sites/hush_billingmanagement,,OneDrive - Singtel\\Digital Team\\Automations\\GUInevere\\images\\diamond.png
+Python,BCC Recon,OneDrive - Singtel\\Digital Team\\DataStore\\Reports Downloading\\ECM\\SR065A\\65A_RPA\\Script (DO NOT TOUCH)\\SR065A - RPA.py,,
+Python,RC Payout,OneDrive - Singtel\\Digital Team\\Automations\\Sales Commission\\Corp\\Retention Comm\\payout-automation-v2.py,OneDrive - Singtel\\Digital Team\\WorkingFiles\\Sales Commission\\Corp\\Retention Comm,
+App,Fake App,https://singtel.sharepoint.com/sites/hush_billingmanagement,,OneDrive - Singtel\\Digital Team\\Automations\\GUInevere\\images\\2.png
+Python,Audit Schedule,OneDrive - Singtel\\Digital Team\\Automations\\Reconciliations - Journalling\\Audit Schedule\\audit-schedule.py,OneDrive - Singtel\\Digital Team\\WorkingFiles\\Reconciliations - Journalling\\Audit Schedule,
