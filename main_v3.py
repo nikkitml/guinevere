@@ -23,11 +23,15 @@ automations = automations[ automations["DISPLAY_NAME"].isin( permissions["AUTOMA
 pythonautomations = automations[ automations["TYPE"] == "Python" ][["TYPE", "DISPLAY_NAME", "CODE_PATH", "WORKING_FOLDER", "ICON"]].copy( deep = True )
 pwrappautomations = automations[ automations["TYPE"] == "App"    ][["TYPE", "DISPLAY_NAME", "CODE_PATH", "WORKING_FOLDER", "ICON"]].copy( deep = True )
 
-colors = ["#CAEDFF", "#E3DFFD", "#D8B4F8", "#E3DFFD"]  # purple blue
+guiconfig = configparser.ConfigParser()
+guiconfig.read( f"{os.environ['USERPROFILE']}\\OneDrive - Singtel\\Digital Team\\Automations\\- Shared\\GUInevere\\settings.ini" )
+# colors = getColorTheme( guiconfig )
+
+# colors = ["#CAEDFF", "#E3DFFD", "#D8B4F8", "#E3DFFD"]  # purple blue
 # colors = ["#DEF5E5", "#BCEAD5", "#9ED5C5", "#E3DFFD"]  # seafoam
 # colors = ["#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF"]  # white
 # colors = ["#FDF7C3", "#FFDEB4", "#FFB4B4", "#D0BFFF"]  # macaron
-# colors = ["#2CD3E1", "#A459D1", "#F266AB", "#FFB84C"]  # solid bright
+colors = ["#2CD3E1", "#A459D1", "#F266AB", "#FFB84C"]  # solid bright
 
 # ---------------------------- UI SETUP ------------------------------- #
 

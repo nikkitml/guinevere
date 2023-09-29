@@ -168,6 +168,20 @@ class Automation:
 
 
 
+def getColorTheme( config ):
+
+    try:
+
+        theme = config["color_palette"][config["user_theme"][os.getlogin()]].split()
+
+    except KeyError:
+
+        theme = ["#CAEDFF", "#E3DFFD", "#D8B4F8", "#E3DFFD"]
+
+    return theme
+
+
+
 def pythonComboboxSelected( event ):
 
     selection = python_combobox.get()
