@@ -1,7 +1,7 @@
 import os
 
 # ---------------------------- FUNCTIONS ------------------------------- #
-exec( open( f"{os.environ['USERPROFILE']}\\OneDrive - Singtel\\Digital Team\\Automations\\- Shared\\GUInevere\\functions_v3.py", encoding = "utf-8" ).read() )
+exec( open( f"{os.environ['USERPROFILE']}/OneDrive - Singtel/Digital Team/Automations/- Shared/GUInevere/guinevere/functions_v3.py", encoding = "utf-8" ).read() )
 
 
 

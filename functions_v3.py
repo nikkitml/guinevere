@@ -1,8 +1,13 @@
 import configparser
+import datetime
 from idlelib.tooltip import Hovertip
+import json
+import os
 import pandas as pd
 import re
+import regex
 import shutil
+import socket
 import subprocess
 import sys
 import time
@@ -388,6 +393,23 @@ def runAndLaunch():
         else:
 
             threading.Thread( target = Auto.runAutomation ).start()
+
+            # Log file
+            vOutputPath = (fr"{os.environ['USERPROFILE']}\OneDrive - Singtel\Digital Team\Automations\- Logging\3-GUI"
+                           + "\\" + (datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None) + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H%M-%S.%f")
+                           + " ; " + socket.gethostname()
+                           + " ; " + os.environ["username"]
+                           + ".txt")
+            d = {"ScriptPath": f"{Auto.getCodePath()}",
+                 "TriggerType": "GUI"
+                 }
+            vOutputString = json.dumps(d)
+            vOutputString = vOutputString.replace('{"ScriptPath": "', '{ "ScriptPath"        : "')
+            vOutputString = vOutputString.replace('", "TriggerType": "', '"\n, "TriggerType"       : "')
+            vOutputString = regex.subf("\}$", "\n}\n", vOutputString, flags=regex.S, )
+            with open(vOutputPath, "w", encoding="utf-8") as OutputFile:
+                OutputFile.write(vOutputString)
+
             cancel_button.config( state = "normal", bg = colors[2] )
             run_button.config( state = "disabled", bg = colors[1] )
 
@@ -692,9 +714,9 @@ def drawAppsFrame():
     global app_canvas_width
     global frame
 
-    app_canvas = Canvas( pwrapp_frame, bg = colors[2] , highlightthickness = 0 )
+    app_canvas = Canvas( pwrapp_frame, bg = colors[2], highlightthickness = 0 )
     app_scrollbar = ttk.Scrollbar( pwrapp_frame, orient = "vertical", command = app_canvas.yview )
-    refresh_apps_button = Button( pwrapp_frame, text = "Refresh" , command = refreshApps, bg = colors[2] )
+    refresh_apps_button = Button( pwrapp_frame, text = "Refresh", command = refreshApps, bg = colors[2] )
     app_canvas.config( yscrollcommand = app_scrollbar.set )
 
     refresh_apps_button.pack( side = BOTTOM, anchor = E )
