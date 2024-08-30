@@ -127,7 +127,7 @@ class Automation:
 
         global workingfiles, process
 
-        # Move uploaded files to working folder
+        # Copy uploaded files to working folder
         for file in workingfiles:
 
             src = file.replace("/", "\\\\")

@@ -59,7 +59,9 @@ browse_img     = PhotoImage( file = f"{os.environ['USERPROFILE']}\\OneDrive - Si
 # +----------+
 # | NOTEBOOK |
 # +----------+
-
+"""
+Contains tabs on left margin and main frame
+"""
 notebook = ttk.Notebook( window, width = 570, height = 345, style = "lefttab.TNotebook" )
 
 python_frame = ttk.Frame( notebook )
@@ -204,27 +206,5 @@ dashboardlist = drawDashboardsFrame()
 dshbrd_frame.bind("<Control-r>", refreshDashboardsShortcut)
 
 
-
-# +---------------------+
-# | REPORT STATUS FRAME |
-# +---------------------+
-
-# vFullPath = r"C:\Users\P1347618\OneDrive - Singtel\Digital Team\Automations\Reports Downloading\VisualizeReports - - Outlook.htm"
-# with   open( vFullPath , 'r' , encoding='utf-8' )   as   oFile   :   vFileContents = oFile.read()
-
-# html_content = """
-# <html>
-# <head></head>
-# <body>
-# <h1>Hello, HTML in Tkinter!</h1>
-# <p>This is a demonstration of displaying HTML content in a Tkinter canvas.</p>
-# </body>
-# </html>
-# """
-
-# canvas = Canvas( status_frame )
-# canvas.pack( fill = BOTH )
-# html_label = HTMLLabel(canvas, html=html_content)
-# canvas.create_window(10, 10, window=html_label, anchor="nw")
 
 window.mainloop()
